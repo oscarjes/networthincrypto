@@ -1,29 +1,125 @@
 <div class="columns">
-  <div class="column">
+  <div class="column is-1">
   </div>
   <div class="column">
-      
-  <div class="field" style="margin-top: 100px;">
-    <div class="control has-icons-left">
-      <input class="input is-medium" type="number" lang="en-150" placeholder="How much Bitcoin you own">
-      <span class="icon is-left">
-          <i class="fa fa-btc" aria-hidden="true"></i>
-        </span>
-    </div>
-  </div>
-    
-  <div class="field" style="margin-top: 100px;">
-      <div class="control has-icons-left">
-        <input class="input is-medium" type="number" lang="en-150" placeholder="Your net worth in USD">
-        <span class="icon is-left">
-            <i class="fa fa-usd" aria-hidden="true"></i>
-          </span>
+
+
+
+  <form action="/submit" method="post">
+    <div class="cryptoportfolio">        
+        
+      <div class="bitcoin-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
+        <img src="/assets/BTC-alt.svg" style="width:30%; height: 30%; color: #white;"/>
+        <div class="field" style="margin-top: 15px">
+          <div class="control">
+            <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="btc" lang="en-150" placeholder="Bitcoin">
+          </div>
+        </div>
+      </div>
+
+    <div class="ether-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
+      <img src="/assets/ETH-alt.svg" style="width:30%; height: 30%; color: #white;"/>
+      <div class="field" style="margin-top: 15px">
+        <div class="control">
+          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="eth" lang="en-150" placeholder="Ether">
+        </div>
       </div>
     </div>
 
-    <button class="button is-primary" style="margin-top: 100px; border-radius: 5px;margin-left: 15%;">Calculate Net Worth % in Bitcoin</button>
+    <div class="ripple-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
+      <img src="/assets/XRP-alt.svg" style="width:30%; height: 30%; color: #white;"/>
+      <div class="field" style="margin-top: 15px">
+        <div class="control">
+          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="xrp" lang="en-150" placeholder="Ripple">
+        </div>
+      </div>
+    </div>
 
+    <div class="bitcoincash-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
+      <img src="/assets/BCC-alt.svg" style="width:30%; height: 30%; color: #white;"/>
+      <div class="field" style="margin-top: 15px">
+        <div class="control">
+          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="bch" lang="en-150" placeholder="Bitcoin Cash">
+        </div>
+      </div>
+    </div>
+
+    <div class="litecoin-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
+      <img src="/assets/LTC-alt.svg" style="width:30%; height: 30%; color: #white;"/>
+      <div class="field" style="margin-top: 15px">
+        <div class="control">
+          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="ltc" lang="en-150" placeholder="Litecoin">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="dash-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
+      <img src="/assets/DASH-alt.svg" style="width:30%; height: 30%; color: #white;"/>
+      <div class="field" style="margin-top: 15px">
+        <div class="control">
+          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="dash" lang="en-150" placeholder="Dash">
+        </div>
+      </div>
+    </div>
+
+    <div class="nem-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
+      <img src="/assets/XEM-alt.svg" style="width:30%; height: 30%; color: #white;"/>
+      <div class="field" style="margin-top: 15px">
+        <div class="control">
+          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="xem" lang="en-150" placeholder="NEM">
+        </div>
+      </div>
+    </div>
+
+    <div class="neo-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
+      <img src="/assets/NEO.svg" style="width:30%; height: 30%; color: #white;"/>
+      <div class="field" style="margin-top: 15px">
+        <div class="control">
+          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="neo" lang="en-150" placeholder="NEO">
+        </div>
+      </div>
+    </div>
+
+    <div class="iota-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
+      <img src="/assets/IOTA.svg" style="width:30%; height: 30%; color: #white;"/>
+      <div class="field" style="margin-top: 15px">
+        <div class="control">
+          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="iot" lang="en-150" placeholder="IOTA">
+        </div>
+      </div>
+    </div>
+
+    <div class="monero-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
+      <img src="/assets/XMR.svg" style="width:30%; height: 30%; color: #white;"/>
+      <div class="field" style="margin-top: 15px">
+        <div class="control">
+          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="xmr" lang="en-150" placeholder="Monero">
+        </div>
+      </div>
+    </div>
+  
   </div>
-  <div class="column">
+
+  <div style="clear: both; float: left; display: block; position: relative;"></div>
+
+  <div class="networth" style="margin-top: 50px;margin-left: 20%; text-align: center; float: left;">
+      
+    <div class="field" style="margin-top: 15px; width: 300px; float: left;">
+      <div class="control has-icons-left">
+        <input id="elementID" class="input is-medium" style="border-radius: 5px;" type="number" name="usd" min="0.00" step="any" lang="en-150" placeholder="Net Worth in USD">
+        <span class="icon is-medium is-left">
+            <i class="fa fa-usd"></i>
+          </span>
+      </div>
+    </div>
+    <button class="button is-primary is-medium" style="border-radius: 5px;margin-top: 15px; margin-left: 15px;float: left;">Calculate</button>
+  </div>
+
+  <div style="clear: both; float: left; display: block; position: relative;"></div>
+
+  </form>
+  </div>
+  <div class="column is-1">
   </div>
 </div>
