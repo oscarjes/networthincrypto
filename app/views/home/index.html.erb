@@ -1,125 +1,187 @@
-<div class="columns">
-  <div class="column is-1">
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/"><strong>CryptoNetWorth</strong></a>
   </div>
-  <div class="column">
+</nav>
 
+<div class="container">
 
+  <a id="how" class="button is-info is-outlined" style="border-radius:5px;margin-left:5%;margin-top:3%; float:left;">How it Works
+    <span class="icon is-small"style="margin-left:2px;">
+      <i id="angle-down" class="fa fa-angle-down" aria-hidden="true"></i>
+    </span>
+  </a>
+  <a href="/about" class="button is-info is-outlined" style="border-radius:5px;margin-left:2%;margin-top:3%; float:left;">About</a>
+  
+  <div class="clear-float"></div>
+
+  <article id="instructions" class="message is-hidden" style="margin-left:5%;margin-top:3%;float:left; width:85%">
+    <div class="message-body">
+      Enter how much of each crypto currency you own. Then, enter your net worth WITHOUT taking crypto into account (if you need help then just google 'net worth calculator'). Once you click 'Calculate', we'll get up-to-date prices of each coin and then calculate just how much of your current net worth is in crypto.
+    </div>
+  </article>
+
+  <div class="clear-float"></div>
 
   <form action="/submit" method="post">
     <div class="cryptoportfolio">        
         
-      <div class="bitcoin-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
-        <img src="/assets/BTC-alt.svg" style="width:30%; height: 30%; color: #white;"/>
+      <div class="bitcoin-container coins">
+        <img src="/assets/BTC-alt.svg" class="coin-img"/>
         <div class="field" style="margin-top: 15px">
           <div class="control">
-            <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="btc" lang="en-150" placeholder="Bitcoin">
+            <input class="input is-medium" style="border-radius: 5px;" 
+              type="number" min="0.00" step="any" name="btc" 
+              lang="en-150" placeholder="Bitcoin">
           </div>
         </div>
       </div>
 
-    <div class="ether-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
-      <img src="/assets/ETH-alt.svg" style="width:30%; height: 30%; color: #white;"/>
+    <div class="ether-container coins" >
+      <img src="/assets/ETH-alt.svg" class="coin-img"/>
       <div class="field" style="margin-top: 15px">
         <div class="control">
-          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="eth" lang="en-150" placeholder="Ether">
+          <input class="input is-medium" style="border-radius: 5px;" 
+            type="number" min="0.00" step="any" name="eth" 
+            lang="en-150" placeholder="Ether">
         </div>
       </div>
     </div>
 
-    <div class="ripple-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
-      <img src="/assets/XRP-alt.svg" style="width:30%; height: 30%; color: #white;"/>
+    <div class="ripple-container coins">
+      <img src="/assets/XRP-alt.svg" class="coin-img"/>
       <div class="field" style="margin-top: 15px">
         <div class="control">
-          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="xrp" lang="en-150" placeholder="Ripple">
+          <input class="input is-medium" style="border-radius: 5px;" 
+            type="number" min="0.00" step="any" name="xrp" 
+            lang="en-150" placeholder="Ripple">
         </div>
       </div>
     </div>
 
-    <div class="bitcoincash-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
-      <img src="/assets/BCC-alt.svg" style="width:30%; height: 30%; color: #white;"/>
+    <div class="bitcoincash-container coins">
+      <img src="/assets/BCC-alt.svg" class="coin-img"/>
       <div class="field" style="margin-top: 15px">
         <div class="control">
-          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="bch" lang="en-150" placeholder="Bitcoin Cash">
+          <input class="input is-medium" style="border-radius: 5px;" 
+            type="number" min="0.00" step="any" name="bch" 
+            lang="en-150" placeholder="Bitcoin Cash">
         </div>
       </div>
     </div>
 
-    <div class="litecoin-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
-      <img src="/assets/LTC-alt.svg" style="width:30%; height: 30%; color: #white;"/>
+    <div class="litecoin-container coins">
+      <img src="/assets/LTC-alt.svg" class="coin-img"/>
       <div class="field" style="margin-top: 15px">
         <div class="control">
-          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="ltc" lang="en-150" placeholder="Litecoin">
+          <input class="input is-medium" style="border-radius: 5px;" 
+            type="number" min="0.00" step="any" name="ltc" 
+            lang="en-150" placeholder="Litecoin">
         </div>
       </div>
     </div>
 
 
-    <div class="dash-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
-      <img src="/assets/DASH-alt.svg" style="width:30%; height: 30%; color: #white;"/>
+    <div class="dash-container coins">
+      <img src="/assets/DASH-alt.svg" class="coin-img"/>
       <div class="field" style="margin-top: 15px">
         <div class="control">
-          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="dash" lang="en-150" placeholder="Dash">
+          <input class="input is-medium" style="border-radius: 5px;" 
+            type="number" min="0.00" step="any" name="dash" 
+            lang="en-150" placeholder="Dash">
         </div>
       </div>
     </div>
 
-    <div class="nem-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
-      <img src="/assets/XEM-alt.svg" style="width:30%; height: 30%; color: #white;"/>
+    <div class="nem-container coins">
+      <img src="/assets/XEM-alt.svg" class="coin-img"/>
       <div class="field" style="margin-top: 15px">
         <div class="control">
-          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="xem" lang="en-150" placeholder="NEM">
+          <input class="input is-medium" style="border-radius: 5px;" 
+            type="number" min="0.00" step="any" name="xem" 
+            lang="en-150" placeholder="NEM">
         </div>
       </div>
     </div>
 
-    <div class="neo-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
-      <img src="/assets/NEO.svg" style="width:30%; height: 30%; color: #white;"/>
+    <div class="neo-container coins">
+      <img src="/assets/NEO.svg" class="coin-img"/>
       <div class="field" style="margin-top: 15px">
         <div class="control">
-          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="neo" lang="en-150" placeholder="NEO">
+          <input class="input is-medium" style="border-radius: 5px;" 
+            type="number" min="0.00" step="any" name="neo" 
+            lang="en-150" placeholder="NEO">
         </div>
       </div>
     </div>
 
-    <div class="iota-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
-      <img src="/assets/IOTA.svg" style="width:30%; height: 30%; color: #white;"/>
+    <div class="iota-container coins">
+      <img src="/assets/IOTA.svg" class="coin-img"/>
       <div class="field" style="margin-top: 15px">
         <div class="control">
-          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="iot" lang="en-150" placeholder="IOTA">
+          <input class="input is-medium" style="border-radius: 5px;" 
+            type="number" min="0.00" step="any" name="iot" 
+            lang="en-150" placeholder="IOTA">
         </div>
       </div>
     </div>
 
-    <div class="monero-container" style="width: 150px; margin-top: 100px; margin-left: 25px; text-align: center; float: left;">
-      <img src="/assets/XMR.svg" style="width:30%; height: 30%; color: #white;"/>
+    <div class="monero-container coins">
+      <img src="/assets/XMR.svg" class="coin-img"/>
       <div class="field" style="margin-top: 15px">
         <div class="control">
-          <input class="input is-medium" style="border-radius: 5px;" type="number" min="0.00" step="any" name="xmr" lang="en-150" placeholder="Monero">
+          <input class="input is-medium" style="border-radius: 5px;" 
+            type="number" min="0.00" step="any" name="xmr" 
+            lang="en-150" placeholder="Monero">
         </div>
       </div>
     </div>
   
   </div>
 
-  <div style="clear: both; float: left; display: block; position: relative;"></div>
+  <div class="clear-float"></div>
 
-  <div class="networth" style="margin-top: 50px;margin-left: 20%; text-align: center; float: left;">
+  <div class="networth">
       
-    <div class="field" style="margin-top: 15px; width: 300px; float: left;">
+    <div class="field nw-input">
       <div class="control has-icons-left">
-        <input id="elementID" class="input is-medium" style="border-radius: 5px;" type="number" name="usd" min="0.00" step="any" lang="en-150" placeholder="Net Worth in USD">
+        <input id="elementID" class="input is-medium" 
+          style="border-radius: 5px;" type="number" name="usd" min="0.00" 
+          step="any" lang="en-150" placeholder="USD Net Worth ">
         <span class="icon is-medium is-left">
             <i class="fa fa-usd"></i>
           </span>
       </div>
     </div>
-    <button class="button is-primary is-medium" style="border-radius: 5px;margin-top: 15px; margin-left: 15px;float: left;">Calculate</button>
+    <button id="js-submit" class="button is-primary is-medium calc-btn" style="margin-bottom:25px;">Calculate</button>
   </div>
 
-  <div style="clear: both; float: left; display: block; position: relative;"></div>
+  <div class="clear-float"></div>
 
   </form>
-  </div>
-  <div class="column is-1">
-  </div>
+
 </div>
+
+<script>  
+    $( document ).on('turbolinks:load', function() {
+      btcdonate();
+    })
+    
+    
+
+    $("#js-submit").click(function(e){
+      $(e.target).addClass("is-loading"); 
+    }); 
+
+    $("#js-about").click(function(e){
+      $("#about").addClass("is-active"); 
+    }); 
+
+    $(".modal-close").click(function() {
+      $(".modal").removeClass("is-active");
+   });
+
+   $("#how").click(function(){
+    $("#instructions").toggleClass("is-hidden");
+  }); 
+</script>

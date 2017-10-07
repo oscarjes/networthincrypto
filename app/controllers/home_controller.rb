@@ -4,6 +4,9 @@ class HomeController < ApplicationController
   def index
   end
 
+  def about
+  end
+
   def calculate
 
     crypto_value_usd = 0
@@ -93,5 +96,17 @@ class HomeController < ApplicationController
     
     final = crypto_value_usd  / (crypto_value_usd + networth)
     @final = final * 100
+
+    if @final < 20
+      @message = "Do you even crypto, bro? You'll never get a lambo this way 😞."
+    elsif @final < 40
+      @message = "It’s a start… but let’s be honest: do you REALLY need that retirement account when you could put it all into crypto 🤷‍♂️?"
+    elsif @final < 60
+      @message = "Not bad. Have you picked a color for your future lambo yet 🏎️?"
+    elsif @final < 80
+      @message = "Baller 🍾. Time to start thinking about which sports team you'll buy."
+    else
+      @message = "To the moon 🚀! You’ll be joining the three commas club in no time."
+    end
   end
 end

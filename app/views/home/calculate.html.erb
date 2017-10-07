@@ -1,2 +1,17 @@
-<h1 style="text-align: center; font-size: 5em;"><%= number_to_percentage(@final, precision: 0) %><br>
-of your Net Worth<br>is in Crypto.<br>You baller.</h1>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/"><strong>CryptoNetWorth</strong></a>
+    </div>
+  </nav>
+  
+  <div class="container">
+  
+    <div class="content content-left">
+      <h5 class="title is-3"><strong><%= number_to_percentage(@final, precision: 2) %> of your net worth is in crypto.</strong></h5>
+      <h5 class="title is-3"><strong><%= @message %></strong></h5>
+    </div>
+      
+    <div class="clear-float"></div>
+    
+    <a href="/" class="button is-info is-outlined" style="border-radius:5px;margin-left:10%;margin-top:3%; float:left;">Try Again</a>
+  </div>

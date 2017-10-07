@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 gem "bulma-rails", github: "harley/bulma-rails"
 gem "font-awesome-rails"
 gem 'httparty'
+gem 'jquery-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
