@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Net Worth in Crypto</title>
+    <title>How much of my Net Worth is in Crypto?</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="Site">
+    <header>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/"><p><strong>How much of my Net Worth is in Crypto?</strong></p>
+            </a>
+        </div>
+      </nav>
+    </header>
+    <main class="Site-content">
+      <%= yield %>
+    </main>
+    <footer>
+        <div class="container">
+          <div class="content has-text-centered" style="padding:30px;">
+              <a href="http://www.twitter.com/itsoscarjes" class="button is-info is-outlined is-small" style="border-radius:5px;">By @itsoscarjes</a>
+          </div>
+        </div>
+      </footer>
   </body>
 </html>

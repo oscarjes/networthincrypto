@@ -40,14 +40,24 @@
 }
 
 .content-left{
-  margin-top: 100px; 
+  margin-top: 50px; 
   margin-left:10%;
   float: left;
 }
 
 .content-right{
-  margin-top: 100px;
+  margin-top: 50px;
   width: 60%;
   margin-left:10%; 
   float: left;
+}
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
 }
