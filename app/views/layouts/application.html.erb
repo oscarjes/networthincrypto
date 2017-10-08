@@ -7,8 +7,14 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <%= favicon_link_tag 'favicon.ico' %>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <meta name="description" content="Find out just how much of your net worth is currently in cryto currencies." />
+    <meta property="og:title" content="How much of my Net Worth is in Crypto?" />
+    <meta property="og:description" content="Find out just how much of your net worth is currently in cryto currencies." />
+    <meta property="og:image" content="https://networthincrypto.com/images/social_preview.png" />
+
   </head>
 
   <body class="Site">
