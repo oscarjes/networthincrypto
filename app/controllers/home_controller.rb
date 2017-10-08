@@ -4,6 +4,12 @@ class HomeController < ApplicationController
   def index
   end
 
+  def thanks
+  end
+
+  def confirmed
+  end
+
   def about
   end
 
