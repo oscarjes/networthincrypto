@@ -1,8 +1,12 @@
 <div class="container">
 
   <div class="content content-left">
-    <h5 class="title is-3"><strong><%= number_to_percentage(@final, precision: 2) %> of your net worth is in crypto.</strong></h5>
-    <h5 class="title is-3"><strong><%= @message %></strong></h5>
+    <% if @final.to_f.nan? == true %>
+      <h5 class="title is-3"><strong>Something went wrong. Try again!</strong></h5>
+    <% else %>
+      <h5 class="title is-3"><strong><%= number_to_percentage(@final, precision: 2) %> of your net worth is in crypto.</strong></h5>
+      <h5 class="title is-3"><strong><%= @message %></strong></h5>
+    <% end %>
   </div>
     
   <div class="clear-float"></div>
@@ -10,36 +14,5 @@
   <a href="/" class="button is-info is-outlined" style="border-radius:5px;margin-left:10%;margin-top:3%; float:left;">Try Again</a>
 
   <div class="clear-float"></div>
-
-  <div class="container">
-    <div class="content" style="margin-top:100px; float: left;margin-left: 30%">
-
-      <div id="mailchimp-top">
-        <p>Want to be notified when I launch more projects like this one?</p>
-
-        
-        <form action="//jesionek.us12.list-manage.com/subscribe/post?u=2d86849e317a8361422e45f2d&amp;id=8f6bd6323a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          <div class="field">
-            <div class="control"> 
-              <input class="input" type="email" value="Enter your email..." name="EMAIL" class="required email" id="mce-EMAIL" style="border-radius:5px; width:200px; margin-top:15px; float: left;" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
-            </div>
-          </div>
-          <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
-          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div class="clear">
-            <div class="field">
-              <div class="control"> 
-                <input class="button is-info" type="submit" value="Notify Me" name="subscribe" id="mc-embedded-subscribe" class="button" style="float: left; border-radius:5px;margin-top:15px; margin-left: 15px;"></div>
-              </div>
-            </div>
-          </div>
-        </form> 
-          
-      </div>
-
-    </div>
-  </div>
 
 </div>
