@@ -29,6 +29,8 @@ gem "bulma-rails", github: "harley/bulma-rails"
 gem "font-awesome-rails"
 gem 'httparty'
 gem 'jquery-rails'
+gem 'jquery-validation-rails'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -16,7 +16,7 @@
 
   <div class="clear-float"></div>
 
-  <form action="/submit" method="post">
+  <form id="js-form" action="/submit" method="post">
     <div class="cryptoportfolio">        
         
       <div class="bitcoin-container coins">
@@ -140,7 +140,7 @@
       <div class="control has-icons-left">
         <input id="elementID" class="input is-medium" 
           style="border-radius: 5px;" type="number" name="usd" min="0.00" 
-          step="any" lang="en-150" placeholder="USD Net Worth ">
+          step="any" lang="en-150" placeholder="USD Net Worth " required>
         <span class="icon is-medium is-left">
             <i class="fa fa-usd"></i>
           </span>
@@ -152,11 +152,18 @@
   </form>
 </div>
 
-<script>      
-
-    $("#js-submit").click(function(e){
-      $(e.target).addClass("is-loading"); 
-    }); 
+<script>  
+  $(document).on('turbolinks:load', function() {
+      
+    $("#js-form").validate({
+      submitHandler:function(form){
+          if (this.valid()){
+            console.log("form is valid", this)
+            $('#js-submit').addClass('is-loading');
+            form.submit();
+          } 
+      }  
+    });
 
     $("#js-about").click(function(e){
       $("#about").addClass("is-active"); 
@@ -169,4 +176,7 @@
    $("#how").click(function(){
     $("#instructions").toggleClass("is-hidden");
   }); 
+
+  });
+
 </script>
