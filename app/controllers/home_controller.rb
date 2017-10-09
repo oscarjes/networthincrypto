@@ -22,7 +22,8 @@ class HomeController < ApplicationController
     if params[:btc]
       btc_response = response["BTC"]
       btc_price = btc_response["USD"]
-      btc = params[:btc].to_i
+      btc = params[:btc].to_f
+      puts btc
       btc_in_usd = btc * btc_price
       crypto_value_usd += btc_in_usd
     end
@@ -30,7 +31,7 @@ class HomeController < ApplicationController
     if params[:eth]
       eth_response = response["ETH"]
       eth_price = eth_response["USD"]
-      eth = params[:eth].to_i
+      eth = params[:eth].to_f
       eth_in_usd = eth * eth_price
       crypto_value_usd += eth_in_usd
     end
@@ -38,7 +39,7 @@ class HomeController < ApplicationController
     if params[:xrp]
       xrp_response = response["XRP"]
       xrp_price = xrp_response["USD"]
-      xrp = params[:xrp].to_i
+      xrp = params[:xrp].to_f
       xrp_in_usd = xrp * xrp_price
       crypto_value_usd += xrp_in_usd
     end
@@ -46,7 +47,7 @@ class HomeController < ApplicationController
     if params[:bch]
       bch_response = response["BCH"]
       bch_price = bch_response["USD"]
-      bch = params[:bch].to_i
+      bch = params[:bch].to_f
       bch_in_usd = bch * bch_price
       crypto_value_usd += bch_in_usd
     end
@@ -54,7 +55,7 @@ class HomeController < ApplicationController
     if params[:ltc]
       ltc_response = response["LTC"]
       ltc_price = ltc_response["USD"]
-      ltc = params[:ltc].to_i
+      ltc = params[:ltc].to_f
       ltc_in_usd = ltc * ltc_price
       crypto_value_usd += ltc_in_usd
     end
@@ -62,7 +63,7 @@ class HomeController < ApplicationController
     if params[:dash]
       dash_response = response["DASH"]
       dash_price = dash_response["USD"]
-      dash = params[:dash].to_i
+      dash = params[:dash].to_f
       dash_in_usd = dash * dash_price
       crypto_value_usd += dash_in_usd
     end
@@ -70,7 +71,7 @@ class HomeController < ApplicationController
     if params[:xem]
       xem_response = response["XEM"]
       xem_price = xem_response["USD"]
-      xem = params[:xem].to_i
+      xem = params[:xem].to_f
       xem_in_usd = xem * xem_price
       crypto_value_usd += xem_in_usd
     end
@@ -78,7 +79,7 @@ class HomeController < ApplicationController
     if params[:neo]
       neo_response = response["NEO"]
       neo_price = neo_response["USD"]
-      neo = params[:neo].to_i
+      neo = params[:neo].to_f
       neo_in_usd = neo * neo_price
       crypto_value_usd += neo_in_usd
     end
@@ -86,7 +87,7 @@ class HomeController < ApplicationController
     if params[:iot]
       iot_response = response["IOT"]
       iot_price = iot_response["USD"]
-      iot = params[:iot].to_i
+      iot = params[:iot].to_f
       iot_in_usd = iot * iot_price
       crypto_value_usd += iot_in_usd
     end
@@ -94,12 +95,12 @@ class HomeController < ApplicationController
     if params[:xmr]
       xmr_response = response["XMR"]
       xmr_price = xmr_response["USD"]
-      xmr = params[:xmr].to_i
+      xmr = params[:xmr].to_f
       xmr_in_usd = xmr * xmr_price
       crypto_value_usd += xmr_in_usd
     end
 
-    networth = params[:usd].to_i
+    networth = params[:usd].to_f
     
     final = crypto_value_usd  / (crypto_value_usd + networth)
     @final = final * 100
