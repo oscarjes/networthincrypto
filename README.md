@@ -1,24 +1,9 @@
-# README
+# Net Worth in Crypto
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple rails application that let's you enter how much of a certain cryptocurrency you own and what your net worth in USD is. It then connects to an API to get up-to-date prices and calculates the percentage of your net worth that is currently in crypto.
 
-Things you may want to cover:
+## Credits
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Icons: [Cryptocoins](https://github.com/allienworks/cryptocoins)
+Crypto Price API: [CryptoCompare](https://www.cryptocompare.com/api/)
+Favicon: question mark by Dániel Aczél from the Noun Project
